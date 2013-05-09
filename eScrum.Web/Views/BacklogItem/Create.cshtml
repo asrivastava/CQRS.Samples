@@ -1,0 +1,19 @@
+﻿@model Scrum.Web.Models.BacklogItemViewModel
+
+<h2>Create Backlog Item</h2>
+@{ Html.BeginForm(); }
+<table>
+    <tr>
+        <td>Name :</td>
+        <td>@Html.TextBoxFor(m=> m.Name)</td>
+    </tr>
+    <tr>
+        <td>Description : </td>
+        <td>@Html.TextAreaFor(m=> m.Description)</td>
+    </tr>
+    <tr>
+        <td colspan="2"><button class="button">Create</button></td>
+        
+    </tr>
+</table>
+@{ Html.EndForm(); }

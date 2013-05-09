@@ -1,0 +1,22 @@
+﻿@model IEnumerable<eScrum.ReadModel.BacklogItemDto>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Backlog Items</h2>
+
+<table width="250">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+@foreach (var item in Model)
+{ 
+    <tr>
+        <td>@Html.ActionLink(item.Name, "Point", new {id=item.ID})</td>
+        <td>@item.Description</td>
+    </tr>
+}
+</table>
+<P></P>
+<a href='@Url.Action("Create")' class="button">Create New</a>
